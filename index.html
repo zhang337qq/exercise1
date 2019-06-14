@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+        }
+        ul{
+            margin: 100px auto;
+            width: 200px;
+            height: 200px;
+            list-style: none;
+            position: relative;
+            transform-style: preserve-3d;
+            /* perspective:500px; */
+            /*transition: all 2s linear;*/
+            /* animation: zhuan 1s step-start infinite; */
+            transform: rotateX(90deg) rotateZ(45deg) rotateY(45deg);
+            animation: zhuan 3s linear infinite;
+        }
+        /*ul:hover{*/
+            /*transform: rotateY(300deg) rotateZ(360deg) rotateX(400deg);*/
+        /*}*/
+        li{
+            width: 200px;
+            height: 200px;
+            position: absolute;
+            text-align: center;
+            line-height: 200px;
+            /* opacity: 0.5; */ 
+            /* background-size: 200px 200px; */
+        }
+        ul li:nth-child(1){
+            background: url("images/N1.jpg");
+            background-size: 200px 200px;
+            transform: rotateY(90deg) translateZ(100px);
+        }
+        ul li:nth-child(2){
+            background: url("images/N2.jpg");
+            background-size: 200px 200px;
+            transform: rotateY(90deg) translateZ(-100px);
+        }
+        ul li:nth-child(3){
+            background: url("images/N3.jpg");
+            background-size: 200px 200px;
+            transform: rotateX(90deg) translateZ(-100px);
+        }
+        ul li:nth-child(4){
+            background: url("images/N4.jpg");
+            background-size: 200px 200px;
+            transform: rotateX(90deg) translateZ(100px);
+        }
+        ul li:nth-child(5){
+            background: url("images/j.jpg");
+            background-size: 200px 200px;
+            transform: rotateZ(90deg) translateZ(100px);
+        }
+        ul li:nth-child(6){
+            background: url("images/N6.jpg");
+            background-size: 200px 200px;
+            transform: rotate(90deg) translateZ(-100px);
+        }
+         @keyframes zhuan{
+            from{
+                transform: rotateY(0deg) rotateZ(0deg) rotateX(0deg);
+
+            }
+             to{
+                 transform: rotateY(360deg) rotateZ(360deg) rotateX(360deg);
+             }
+        }
+    </style>
+<body>
+    <ul>
+        <li>1</li>
+        <li>2</li>
+        <li>3</li>
+        <li>4</li>
+        <li>5</li>
+        <li>6</li>
+    </ul>
+</body>
+</html>
